@@ -29,6 +29,7 @@
 		private void InitializeComponent()
 		{
 			this.groupBox = new System.Windows.Forms.GroupBox();
+			this.rbHours = new System.Windows.Forms.RadioButton();
 			this.rbSeconds = new System.Windows.Forms.RadioButton();
 			this.rbMinutes = new System.Windows.Forms.RadioButton();
 			this.rbDays = new System.Windows.Forms.RadioButton();
@@ -39,7 +40,6 @@
 			this.tbMonth = new System.Windows.Forms.TextBox();
 			this.tbDay = new System.Windows.Forms.TextBox();
 			this.btnCount = new System.Windows.Forms.Button();
-			this.rbHours = new System.Windows.Forms.RadioButton();
 			this.groupBox.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -57,6 +57,17 @@
 			this.groupBox.Size = new System.Drawing.Size(107, 169);
 			this.groupBox.TabIndex = 1;
 			this.groupBox.TabStop = false;
+			// 
+			// rbHours
+			// 
+			this.rbHours.AutoSize = true;
+			this.rbHours.Location = new System.Drawing.Point(7, 88);
+			this.rbHours.Name = "rbHours";
+			this.rbHours.Size = new System.Drawing.Size(53, 17);
+			this.rbHours.TabIndex = 5;
+			this.rbHours.TabStop = true;
+			this.rbHours.Text = "Hours";
+			this.rbHours.UseVisualStyleBackColor = true;
 			// 
 			// rbSeconds
 			// 
@@ -118,7 +129,7 @@
 			this.lbCountDay.AutoSize = true;
 			this.lbCountDay.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.lbCountDay.ForeColor = System.Drawing.Color.DarkOliveGreen;
-			this.lbCountDay.Location = new System.Drawing.Point(12, 134);
+			this.lbCountDay.Location = new System.Drawing.Point(5, 174);
 			this.lbCountDay.Name = "lbCountDay";
 			this.lbCountDay.Size = new System.Drawing.Size(35, 37);
 			this.lbCountDay.TabIndex = 2;
@@ -165,24 +176,13 @@
 			this.btnCount.Text = "Count";
 			this.btnCount.UseVisualStyleBackColor = true;
 			// 
-			// rbHours
-			// 
-			this.rbHours.AutoSize = true;
-			this.rbHours.Location = new System.Drawing.Point(7, 88);
-			this.rbHours.Name = "rbHours";
-			this.rbHours.Size = new System.Drawing.Size(53, 17);
-			this.rbHours.TabIndex = 5;
-			this.rbHours.TabStop = true;
-			this.rbHours.Text = "Hours";
-			this.rbHours.UseVisualStyleBackColor = true;
-			// 
 			// CountDayToDate
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.AutoSize = true;
 			this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-			this.ClientSize = new System.Drawing.Size(242, 180);
+			this.ClientSize = new System.Drawing.Size(242, 220);
 			this.Controls.Add(this.btnCount);
 			this.Controls.Add(this.tbDay);
 			this.Controls.Add(this.tbMonth);

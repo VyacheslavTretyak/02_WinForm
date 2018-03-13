@@ -55,17 +55,43 @@ namespace CoutDayToDate
 						cheched = item.Text;
 					}
 				}
+				TimeSpan ts;
 				switch (cheched)
 				{
 					case "Years":
-						Calculation();
+						ts = Calculation();
+						lbCountDay.Text = (ts.TotalDays / 365f).ToString();
+						break;
+					case "Months":
+						ts = Calculation();
+						lbCountDay.Text = (ts.TotalDays / 30f).ToString();
+						break;
+					case "Days":
+						ts = Calculation();
+						lbCountDay.Text = ts.TotalDays.ToString();
+						break;
+					case "Hours":
+						ts = Calculation();
+						lbCountDay.Text = ts.TotalHours.ToString();
+						break;
+					case "Minutes":
+						ts = Calculation();
+						lbCountDay.Text = ts.TotalMinutes.ToString();
+						break;
+					case "Seconds":
+						ts = Calculation();
+						lbCountDay.Text = ts.TotalSeconds.ToString();
 						break;
 				}
 			}
 		}
-		private void Calculation()
+		private TimeSpan Calculation()
 		{
-			lbCountDay.Text = DateTime.Now.Ticks.ToString() ;
+			int year = int.Parse(tbYear.Text);
+			int month = int.Parse(tbMonth.Text);
+			int day = int.Parse(tbDay.Text);
+			DateTime dt = new DateTime(year, month, day);
+			return DateTime.Now.Subtract(dt);			
 		}
 
 		private void TbDay_Leave(object sender, EventArgs e)
