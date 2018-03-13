@@ -60,27 +60,27 @@ namespace CoutDayToDate
 				{
 					case "Years":
 						ts = Calculation();
-						lbCountDay.Text = (ts.TotalDays / 365f).ToString();
+						lbCountDay.Text = (ts.TotalDays / 365f).ToString("F3");
 						break;
 					case "Months":
 						ts = Calculation();
-						lbCountDay.Text = (ts.TotalDays / 30f).ToString();
+						lbCountDay.Text = (ts.TotalDays / 30f).ToString("F3");
 						break;
 					case "Days":
 						ts = Calculation();
-						lbCountDay.Text = ts.TotalDays.ToString();
+						lbCountDay.Text = ts.TotalDays.ToString("F3");
 						break;
 					case "Hours":
 						ts = Calculation();
-						lbCountDay.Text = ts.TotalHours.ToString();
+						lbCountDay.Text = ts.TotalHours.ToString("F3");
 						break;
 					case "Minutes":
 						ts = Calculation();
-						lbCountDay.Text = ts.TotalMinutes.ToString();
+						lbCountDay.Text = ts.TotalMinutes.ToString("F3");
 						break;
 					case "Seconds":
 						ts = Calculation();
-						lbCountDay.Text = ts.TotalSeconds.ToString();
+						lbCountDay.Text = ts.TotalSeconds.ToString("F3");
 						break;
 				}
 			}
